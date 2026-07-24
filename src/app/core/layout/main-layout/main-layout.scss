@@ -1,0 +1,35 @@
+.layout {
+    min-height: 100vh;
+}
+
+mat-sidenav {
+    width: 280px;
+    padding: 2rem 1.5rem;
+}
+
+.mobile-nav {
+    display: flex;
+    flex-direction: column;
+    gap: .5rem;
+}
+
+.mobile-nav__link {
+    display: block;
+    padding: .9rem 1rem;
+    text-decoration: none;
+    color: inherit;
+    border-radius: .5rem;
+    transition: background-color .2s ease;
+}
+
+.mobile-nav__link:hover {
+    background-color: rgba(0, 0, 0, .05);
+}
+
+.mobile-nav__header {
+    margin-bottom: 2rem;
+
+    font-size: 1.25rem;
+    font-weight: 700;
+}
+

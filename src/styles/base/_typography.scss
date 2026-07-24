@@ -1,0 +1,9 @@
+@use '../abstracts/variables' as *;
+
+html {
+    font-family: 'Montserrat', sans-serif;
+}
+body {
+    color: $text-primary;
+    background: $background;
+}

@@ -1,0 +1,11 @@
+@use '../abstracts/variables' as *;
+
+section {
+    padding-block: $space-3xl;
+    scroll-margin-top: 5rem;
+}
+.section-fullscreen {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+}

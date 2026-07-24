@@ -1,0 +1,38 @@
+<mat-toolbar 
+    class="navbar"
+    [class.navbar--scrolled]="scrolled()">
+    <div class="container navbar__container">
+        <a class="navbar__logo"
+            href="#hero"
+            aria-label="Ir al inicio">
+            {{ portfolio.brandName }}
+        </a>
+
+        <nav
+            class="navbar__nav"
+            aria-label="Navegación principal">
+
+            @for (item of navigationItems; track item.anchor) {
+                <a
+                    mat-button
+                    class="navbar__link"
+                    [href]="'#' + item.anchor">
+
+                    {{ item.label }}
+
+                </a>
+            }
+        </nav>
+
+        <button
+            mat-icon-button
+            type="button"
+            class="navbar__menu-button"
+            aria-label="Abrir menú"
+            (click)="onMenuButtonClick()">
+
+            <mat-icon>menu</mat-icon>
+
+        </button>
+    </div>
+</mat-toolbar>

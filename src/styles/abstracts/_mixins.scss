@@ -1,0 +1,13 @@
+@use './breakpoints' as bp;
+
+@mixin down($breakpoint) {
+    @media (max-width: ($breakpoint - 0.02px)) {
+        @content;
+    }
+}
+
+@mixin up($breakpoint) {
+    @media (min-width: $breakpoint) {
+        @content;
+    }
+}

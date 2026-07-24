@@ -1,0 +1,46 @@
+
+<!-- El Navbar queda fuera del MatSidenavContainer para que position: sticky
+    no se vea afectado por el contexto de overflow que crea Angular Material. -->
+<app-navbar (menuToggle)="sidenav.toggle()"></app-navbar>
+
+<mat-sidenav-container class="layout">
+
+    <mat-sidenav
+        #sidenav
+        mode="over"
+        position="end">
+
+        <div class="mobile-nav__header">
+            {{ portfolio.brandName }}
+        </div>
+
+        <nav class="mobile-nav">
+            @for (item of navigationItems; track item.anchor) {
+
+                <a
+                    class="mobile-nav__link"
+                    [href]="'#' + item.anchor"
+                    (click)="sidenav.close()">
+
+                    {{ item.label }}
+
+                </a>
+            }
+
+        </nav>
+    </mat-sidenav>
+    <mat-sidenav-content>
+
+
+        <app-hero />
+
+        <app-about />
+
+        <app-stack />
+
+        <app-projects />
+
+        <app-contact />
+
+    </mat-sidenav-content>
+</mat-sidenav-container>

@@ -1,1 +1,41 @@
-/* You can add global styles to this file, and also import other style files */
+@use '@angular/material' as mat;
+@use './styles/abstracts/variables';
+@use './styles/abstracts/mixins';
+@use './styles/abstracts/breakpoints';
+
+@use './styles/base/reset';
+@use './styles/base/typography';
+
+@use './styles/layout/container';
+@use './styles/layout/sections';
+
+@use './styles/components/buttons';
+@use './styles/components/cards';
+
+@use './styles/themes/theme';
+
+@use './styles/utilities/animations';
+@use './styles/utilities/helpers';
+
+html {
+  height: 100%;
+  @include mat.theme(
+    (
+      color: (
+        primary: mat.$azure-palette,
+        tertiary: mat.$blue-palette,
+      ),
+      density: 0,
+    )
+  );
+}
+
+body {
+  margin: 0;
+  min-height: 100%;
+
+  background-color: var(--mat-sys-surface);
+  color: var(--mat-sys-on-surface);
+
+  font-family: 'Montserrat', sans-serif;
+}

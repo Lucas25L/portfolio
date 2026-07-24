@@ -1,0 +1,67 @@
+<section id="hero" class="section-fullscreen">
+    <div class="container hero__container">
+        <!-- Contenido principal del Hero -->
+        <div class="hero__content">
+            <!-- Encabezado de presentación -->
+            <div class="hero__header">
+                <span class="hero__greeting">
+                    {{ hero.greeting }}
+                </span>
+                <h1 class="hero__name">
+                    {{ hero.name }}
+                </h1>
+                <h2 class="hero__title">
+                    {{ hero.title }}
+                </h2>
+            </div>
+
+            <!-- Acciones principales (CV, GitHub y LinkedIn) -->
+            <div class="hero__actions">
+                @for (action of heroActions; track action.label) {
+                    @if (action.variant === 'primary') {
+                        <a
+                            mat-flat-button
+                            class="hero__button hero__button--primary"
+                            [href]="action.href"
+                            [target]="action.target">
+                                <fa-icon 
+                                    [icon]="icons[action.icon]">
+                                </fa-icon>
+                                <span>{{ action.label }}</span>
+                        </a>
+                    } @else {
+                        <a
+                            mat-stroked-button
+                            class="hero__button hero__button--secondary"
+                            [href]="action.href"
+                            [target]="action.target">
+                                <fa-icon
+                                    [icon]="icons[action.icon]">
+                                </fa-icon>
+                                <span>{{ action.label }}</span>
+                        </a>
+                    }
+                }
+            </div>
+
+            <!-- Descripción profesional -->
+            <p class="hero__description">
+                {{ hero.description }}
+            </p>
+        </div>
+
+        <!-- Imagen de perfil -->
+        <div class="hero__image">
+
+            <!-- Contenedor preparado para futuros efectos visuales -->
+            <div class="hero__image-wrapper">
+
+                <img
+                    [src]="heroImage.src"
+                    [alt]="heroImage.alt">
+
+            </div>
+
+        </div>
+    </div>
+</section>
