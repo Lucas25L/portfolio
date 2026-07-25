@@ -51,17 +51,10 @@
         </div>
 
         <!-- Imagen de perfil -->
-        <div class="hero__image">
-
-            <!-- Contenedor preparado para futuros efectos visuales -->
-            <div class="hero__image-wrapper">
-
-                <img
-                    [src]="heroImage.src"
-                    [alt]="heroImage.alt">
-
-            </div>
-
-        </div>
+        <app-profile-image
+            class="hero__image"
+            [src]="heroImage.src"
+            [alt]="heroImage.alt">
+        </app-profile-image>
     </div>
 </section>

@@ -1,5 +1,55 @@
-<section id="about" class="section-fullscreen">
-  <div class="container">
-    <h1>About</h1>
-  </div>
+<section id="about" class="section">
+
+    <div class="container">
+
+        <div class="about__content">
+
+            <header class="about__header">
+
+                <h2 class="about__title">
+                    {{ about.title }}
+                </h2>
+
+                <p class="about__subtitle">
+                    {{ about.subtitle }}
+                </p>
+
+            </header>
+
+            <div class="about__info">
+
+                <div class="about__description">
+
+                    @for (paragraph of about.description; track paragraph) {
+                        <p>{{ paragraph }}</p>
+                    }
+
+                </div>
+
+                <div class="about__highlights">
+
+                    @for (highlight of about.highlights; track highlight.title) {
+
+                        <article class="about__card">
+
+                            <h3 class="about__card-title">
+                                {{ highlight.title }}
+                            </h3>
+
+                            <p class="about__card-description">
+                                {{ highlight.description }}
+                            </p>
+
+                        </article>
+
+                    }
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
 </section>

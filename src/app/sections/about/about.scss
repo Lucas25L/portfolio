@@ -1,0 +1,129 @@
+@use "../../../styles/abstracts/variables" as *;
+@use "../../../styles/abstracts/breakpoints" as bp;
+@use "../../../styles/abstracts/mixins" as mixins;
+
+/* ==========================================
+    About - Content
+========================================== */
+.about__content {
+    display: flex;
+    flex-direction: column;
+    gap: $space-lg;
+    max-width: 860px;
+
+    margin-inline: auto;
+}
+
+
+/* ==========================================
+    About - Header
+========================================== */
+.about__header {
+    display: flex;
+    flex-direction: column;
+    
+    text-align: start;
+
+    gap: $space-xl;
+}
+
+
+/* ===========================
+    Encabezado
+=========================== */
+.about__title {
+    font-size: clamp(2rem, 3.6vw, 3.4rem);
+    font-weight: 700;
+    color: $text-primary;
+}
+
+.about__subtitle {
+    font-size: 1.2rem;
+    font-weight: 500;
+    color: $primary;
+    line-height: 1.5;
+}
+
+
+/* ==========================================
+    About - Description
+========================================== */
+.about__description {
+
+    display: flex;
+
+    flex-direction: column;
+
+    gap: $space-sm;
+}
+.about__description p {
+
+    font-size: 1rem;
+
+    line-height: 1.7;
+
+    color: $text-secondary;
+}
+
+/* ==========================================
+    About - Highlights
+========================================== */
+.about__highlights {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(220px, 1fr));
+    justify-content: center;
+    gap: $space-xl;
+}
+.about__card {
+    padding: $space-sm;
+
+    border: 1px solid $border;
+    border-radius: $radius-md;
+
+    background: $surface;
+    box-shadow: $shadow-sm;
+
+    transition:
+        transform $transition-fast,
+        box-shadow $transition-fast;
+}
+.about__card:hover {
+    transform: translateY(-4px);
+    box-shadow: $shadow-md;
+    border-color: rgba($primary, .25);
+}
+.about__card-title {
+
+    margin-bottom: $space-xs;
+
+    font-size: 1.1rem;
+
+    font-weight: 700;
+
+    color: $text-primary;
+}
+.about__card-description {
+    line-height: 1.6;
+    color: $text-secondary;
+}
+
+
+/* ==========================================
+    About - Responsive
+========================================== */
+@include mixins.down(bp.$lg) {
+    .about__content {
+        max-width: 100%;
+    }
+
+    .about__highlights {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+@include mixins.down(bp.$md) {
+
+    .about__highlights {
+        grid-template-columns: 1fr;
+    }
+
+}

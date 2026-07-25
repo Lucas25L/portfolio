@@ -1,9 +1,14 @@
-import { Component } from '@angular/core';
+import { ChangeDetectionStrategy, Component } from '@angular/core';
+import { ABOUT_CONFIG } from '../../core/config/about.config';
 
 @Component({
   selector: 'app-about',
-  imports: [],
   templateUrl: './about.html',
   styleUrl: './about.scss',
+  changeDetection: ChangeDetectionStrategy.OnPush
 })
-export class About {}
+export class AboutComponent {
+  // Configuración
+  protected readonly about = ABOUT_CONFIG;
+  
+}

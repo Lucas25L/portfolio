@@ -7,13 +7,15 @@ import { MatButtonModule } from '@angular/material/button';
 import { HERO_IMAGE } from '../../core/config/hero-image.config';
 import { ICONS } from '../../core/config/icons.config';
 import { FaIconComponent } from '@fortawesome/angular-fontawesome';
+import { ProfileImageComponent } from '../../shared/ui/profile-image/profile-image.component';
 
 @Component({
   selector: 'app-hero',
   standalone: true,
   imports: [
     MatButtonModule,
-    FaIconComponent
+    FaIconComponent,
+    ProfileImageComponent
   ],
   templateUrl: './hero.html',
   styleUrl: './hero.scss',

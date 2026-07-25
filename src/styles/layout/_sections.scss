@@ -1,11 +1,27 @@
 @use '../abstracts/variables' as *;
 
-section {
-    padding-block: $space-3xl;
+/* ==========================================
+    Sección base
+========================================== */
+
+.section {
+
+    padding-block: $space-2xl;
+
     scroll-margin-top: 5rem;
 }
+
+/* ==========================================
+    Secciones pantalla completa
+========================================== */
+
 .section-fullscreen {
+
     min-height: 100vh;
+
     display: flex;
+
     align-items: center;
+
+    scroll-margin-top: 5rem;
 }

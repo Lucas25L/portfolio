@@ -2,7 +2,7 @@ import { Component } from '@angular/core';
 import { Contact } from '../../../sections/contact/contact';
 import { Stack } from '../../../sections/stack/stack';
 import { Projects } from '../../../sections/projects/projects';
-import { About } from '../../../sections/about/about';
+import { AboutComponent } from '../../../sections/about/about';
 import { HeroComponent } from '../../../sections/hero/hero';
 import { NavbarComponent } from '../navbar/navbar';
 import { MatSidenavModule } from '@angular/material/sidenav';
@@ -14,7 +14,7 @@ import { PORTFOLIO_CONFIG } from '../../config/portfolio.config';
   imports: [
     NavbarComponent,
     HeroComponent,
-    About,
+    AboutComponent,
     Stack,
     Projects,
     Contact,

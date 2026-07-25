@@ -5,14 +5,13 @@
 /* ==========================================
     Hero - Layout
 ========================================== */
-
 /* Distribuye el contenido en dos columnas:
     texto a la izquierda e imagen a la derecha. */
 .hero__container {
     display: grid;
-    grid-template-columns: 1.2fr 0.8fr;
+    grid-template-columns: 1.3fr .7fr;
     align-items: center;
-    gap: 4rem;
+    gap: $space-xl;
 }
 
 
@@ -23,6 +22,7 @@
 .hero__content {
     display: flex;
     flex-direction: column;
+
     gap: $space-lg;
 }
 
@@ -180,64 +180,10 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    width: 320px;
 
-    max-width: 360px;
-
-    justify-self: end;
+    justify-self: center;
 }
-
-/* ===========================
-    Contenedor de la fotografía
-=========================== */
-.hero__image-wrapper {
-
-    overflow: hidden;
-
-    border-radius: 50%;
-
-    background-color: $surface;
-
-    box-shadow: $shadow-md;
-
-    border: 1px solid $border;
-
-    transition:
-        transform $transition-normal,
-        box-shadow $transition-normal;
-}
-
-/* ===========================
-    Fotografía
-=========================== */
-.hero__image-wrapper img{
-
-    display: block;
-
-    width: 100%;
-
-    height: auto;
-
-    object-fit: cover;
-
-    transition:
-        transform $transition-normal;
-}
-
-/* ===========================
-    Interacción
-=========================== */
-.hero__image-wrapper:hover {
-
-    transform: translateY(-4px);
-
-    box-shadow: $shadow-sm;
-}
-
-.hero__image-wrapper:hover img {
-
-    transform: scale(1.02);
-}
-
 
 /* ==========================================
     Hero - Responsive
@@ -248,12 +194,6 @@
         grid-template-columns: 1fr;
         gap: 2.5rem;
         text-align: center;
-    }
-
-    .hero__image {
-        order: -1;
-        max-width: 280px;
-        margin-inline: auto;
     }
 
     .hero__content {
@@ -268,8 +208,9 @@
         max-width: 34rem;
     }
 
-    .hero__image img {
-        width: min(75vw, 280px);
+    .hero__image {
+        order: -1;
+        width: min(55vw, 210px);
+        margin-inline: auto;
     }
-
 }
