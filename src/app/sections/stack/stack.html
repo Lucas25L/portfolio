@@ -1,5 +1,54 @@
-<section id="stack" class="section-fullscreen">
-  <div class="container">
-    <h1>Stack</h1>
-  </div>
+<section id="stack" class="section">
+
+    <div class="container">
+
+        <!-- Encabezado -->
+
+        <header class="stack__header">
+
+            <h2 class="stack__title">
+                Stack
+            </h2>
+
+            <p class="stack__description">
+                Tecnologías con las que desarrollo actualmente.
+            </p>
+
+        </header>
+
+        <!-- Categorías -->
+
+        <div class="stack__grid">
+
+            @for (category of stack; track category.title) {
+
+                <article class="stack__card">
+
+                    <h3 class="stack__card-title">
+                        {{ category.title }}
+                    </h3>
+
+                    <div class="stack__icons">
+
+                        @for (item of category.items; track item.name) {
+
+                            <img
+                                class="stack__icon"
+                                [src]="'assets/icons/' + item.icon + '.svg'"
+                                [alt]="item.name"
+                                [title]="item.name"
+                                loading="lazy"
+                                draggable="false">
+
+                        }
+
+                    </div>
+
+                </article>
+
+            }
+        </div>
+
+    </div>
+
 </section>

@@ -1,9 +1,15 @@
-import { Component } from '@angular/core';
+import { ChangeDetectionStrategy, Component } from '@angular/core';
+import { STACK_CONFIG } from '../../core/config/stack.config';
 
 @Component({
-  selector: 'app-stack',
-  imports: [],
-  templateUrl: './stack.html',
-  styleUrl: './stack.scss',
+    selector: 'app-stack',
+    imports: [],
+    templateUrl: './stack.html',
+    styleUrl: './stack.scss',
+    changeDetection: ChangeDetectionStrategy.OnPush
 })
-export class Stack {}
+export class StackComponent {
+
+    protected readonly stack = STACK_CONFIG;
+
+}

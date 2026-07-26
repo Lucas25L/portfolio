@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { Contact } from '../../../sections/contact/contact';
-import { Stack } from '../../../sections/stack/stack';
+import { StackComponent } from '../../../sections/stack/stack';
 import { Projects } from '../../../sections/projects/projects';
 import { AboutComponent } from '../../../sections/about/about';
 import { HeroComponent } from '../../../sections/hero/hero';
@@ -15,7 +15,7 @@ import { PORTFOLIO_CONFIG } from '../../config/portfolio.config';
     NavbarComponent,
     HeroComponent,
     AboutComponent,
-    Stack,
+    StackComponent,
     Projects,
     Contact,
     
