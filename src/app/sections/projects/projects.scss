@@ -1,0 +1,18 @@
+@use '../../../styles/abstracts/variables' as *;
+
+.projects__list {
+    display: flex;
+    flex-direction: column;
+    gap: $space-2xl;
+}
+.projects__title {
+    font-size: clamp(3rem, 5vw, 4.5rem);
+    font-weight: 800;
+    line-height: 1.1;
+    color: $text-primary;
+}
+.projects__description {
+    max-width: 38rem;
+    line-height: 1.6;
+    color: $text-secondary;
+}

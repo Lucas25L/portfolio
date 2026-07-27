@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 import { Contact } from '../../../sections/contact/contact';
 import { StackComponent } from '../../../sections/stack/stack';
-import { Projects } from '../../../sections/projects/projects';
+import { ProjectsComponent } from '../../../sections/projects/projects';
 import { AboutComponent } from '../../../sections/about/about';
 import { HeroComponent } from '../../../sections/hero/hero';
 import { NavbarComponent } from '../navbar/navbar';
@@ -16,7 +16,7 @@ import { PORTFOLIO_CONFIG } from '../../config/portfolio.config';
     HeroComponent,
     AboutComponent,
     StackComponent,
-    Projects,
+    ProjectsComponent,
     Contact,
     
     MatSidenavModule,

@@ -63,103 +63,13 @@
     Hero - Actions
 ========================================== */
 /* Botones */
-.hero__button {
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    gap: .65rem;
 
-    height: 48px;
-    padding-inline: $space-md;
-
-    border-radius: $radius-md;
-
-    font-weight: 600;
-    letter-spacing: .3px;
-    text-decoration: none;
-
-    white-space: nowrap;
-
-    box-shadow: $shadow-sm;
-
-    transition:
-        transform $transition-fast,
-        box-shadow $transition-fast,
-        background-color $transition-fast,
-        border-color $transition-fast,
-        color $transition-fast;
-}
-
-/* Iconos */
+/* Iconos */ 
 .hero__button fa-icon {
     font-size: 1rem;
     display: flex;
     align-items: center;
     justify-content: center;
-}
-
-.hero__button:hover {
-    transform: translateY(-2px);
-}
-
-
-/* ===========================
-    Botón primario
-=========================== */
-
-.hero__button--primary {
-
-    background-color: $primary !important;
-    color: $surface !important;
-
-    &:hover {
-
-        background-color: $primary-hover !important;
-    }
-}
-
-
-/* ===========================
-    Botones secundarios
-=========================== */
-
-.hero__button--secondary {
-
-    background-color: $surface !important;
-
-    color: $text-primary !important;
-
-    border: 1px solid $border !important;
-
-    &:hover {
-
-        background-color: rgba($primary, .05) !important;
-
-        border-color: $primary !important;
-    }
-}
-
-
-/* ===========================
-    Estado activo
-=========================== */
-
-.hero__button:active {
-
-    transform: translateY(1px);
-
-    box-shadow: $shadow-sm;
-}
-
-/* ===========================
-    Focus
-=========================== */
-
-.hero__button:focus-visible {
-
-    outline: 3px solid rgba($primary, .25);
-
-    outline-offset: 3px;
 }
 
 

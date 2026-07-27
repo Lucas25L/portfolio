@@ -1,5 +1,36 @@
-<section id="projects">
-  <div class="container">
-    <h1>Projects</h1>
-  </div>
+<section id="projects" class="section">
+
+    <div class="container">
+
+        <!-- Encabezado -->
+
+        <header class="projects__header">
+
+            <h2 class="projects__title">
+                Proyectos
+            </h2>
+
+            <p class="projects__description">
+                Algunos de los proyectos que reflejan mi evolución como desarrollador.
+            </p>
+
+        </header>
+
+        <!-- Proyectos -->
+
+        <div class="projects__list">
+
+          @for (project of projects; track project.title; let index = $index) {
+
+              <app-project-card
+                  [project]="project"
+                  [reverse]="index % 2 !== 0">
+              </app-project-card>
+
+          }
+
+        </div>
+
+    </div>
+
 </section>

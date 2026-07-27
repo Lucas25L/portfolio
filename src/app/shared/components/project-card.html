@@ -1,0 +1,94 @@
+<article class="project-card" [class.project-card--reverse]="reverse()">
+
+    <!-- Imagen -->
+
+    <div class="project-card__image">
+        <img
+            [src]="project().imageUrl"
+            [alt]="project().title"
+            loading="lazy"
+            draggable="false">
+    </div>
+
+    <!-- Información -->
+
+    <div class="project-card__content">
+
+        <h3 class="project-card__title">
+            {{ project().title }}
+        </h3>
+
+        <p class="project-card__summary">
+            {{ project().summary }}
+        </p>
+
+        <!-- Tecnologías -->
+
+        <div class="project-card__technologies">
+
+            @for (technology of project().technologies; track technology.name) {
+
+                <img
+                    class="project-card__technology-icon"
+                    [src]="technology.icon"
+                    [alt]="technology.name"
+                    [title]="technology.name"
+                    loading="lazy"
+                    draggable="false">
+
+            }
+
+        </div>
+
+        <!-- Enfoque técnico -->
+
+        <div class="project-card__technical-focus">
+
+            <h4>
+                Enfoque técnico
+            </h4>
+
+            <p>
+                {{ project().technicalFocus }}
+            </p>
+
+        </div>
+
+        <!-- Descripción -->
+
+        <p class="project-card__description">
+            {{ project().description }}
+        </p>
+
+        <!-- Acciones -->
+
+        <div class="project-card__actions">
+
+            <a
+                class="button button--primary"
+                [href]="project().githubUrl"
+                target="_blank"
+                rel="noopener noreferrer">
+
+                GitHub
+
+            </a>
+
+            @if (project().demoUrl) {
+
+                <a
+                    class="button button--secondary"
+                    [href]="project().demoUrl"
+                    target="_blank"
+                    rel="noopener noreferrer">
+
+                    Demo
+
+                </a>
+
+            }
+
+        </div>
+
+    </div>
+</article>

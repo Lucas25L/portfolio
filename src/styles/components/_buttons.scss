@@ -1,1 +1,76 @@
 @use '../abstracts/variables' as *;
+
+/* Botones */
+.button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: .65rem;
+
+    height: 48px;
+    padding-inline: $space-md;
+
+    border-radius: $radius-md;
+
+    font-weight: 600;
+    letter-spacing: .3px;
+    text-decoration: none;
+
+    white-space: nowrap;
+
+    box-shadow: $shadow-sm;
+
+    transition:
+        transform $transition-fast,
+        box-shadow $transition-fast,
+        background-color $transition-fast,
+        border-color $transition-fast,
+        color $transition-fast;
+}
+
+.button--primary {
+    background-color: $primary !important;
+    color: $surface !important;
+}
+.button--primary:hover {
+
+    background: $primary-hover;
+
+    transform: translateY(-2px);
+
+}
+
+
+.button--secondary {
+    background-color: $surface !important;
+    color: $text-primary !important;
+    border: 1px solid $border !important;
+}
+.button--secondary:hover {
+    background-color: rgba($primary, .05) !important;
+    border-color: $primary !important;
+    color: white;
+    transform: translateY(-2px);
+}
+
+/* ===========================
+    Estado activo
+=========================== */
+
+.button:active {
+
+    transform: translateY(1px);
+
+    box-shadow: $shadow-sm;
+}
+
+/* ===========================
+    Focus
+=========================== */
+
+.button:focus-visible {
+
+    outline: 3px solid rgba($primary, .25);
+
+    outline-offset: 3px;
+}
