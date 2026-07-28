@@ -1,5 +1,51 @@
-<section id="contact">
-  <div class="container">
-    <h1>Contact</h1>
-  </div>
+<section id="contact" class="section--compact-bottom">
+
+    <div class="container">
+
+        <div class="contact">
+
+            <!-- Contenido principal -->
+
+            <h2 class="contact__title">
+                {{ contact.title }}
+            </h2>
+
+            <p class="contact__description">
+                {{ contact.description }}
+            </p>
+
+            <!-- Enlaces -->
+
+            <nav
+                class="contact__links"
+                aria-label="Enlaces de contacto">
+
+                @for (link of contact.links; track link.label) {
+
+                    <a
+                      class="contact__link"
+                      [href]="link.url"
+                      [attr.aria-label]="link.ariaLabel"
+                      [attr.target]="link.external ? '_blank' : null"
+                      [attr.rel]="link.external ? 'noopener noreferrer' : null">
+
+                      <img
+                          class="contact__icon"
+                          [src]="link.icon"
+                          [alt]="link.label">
+
+                      <span class="contact__label">
+                          {{ link.label }}
+                      </span>
+
+                    </a>
+
+                }
+
+            </nav>
+
+        </div>
+
+    </div>
+
 </section>

@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { Contact } from '../../../sections/contact/contact';
+import { ContactComponent } from '../../../sections/contact/contact';
 import { StackComponent } from '../../../sections/stack/stack';
 import { ProjectsComponent } from '../../../sections/projects/projects';
 import { AboutComponent } from '../../../sections/about/about';
@@ -17,7 +17,7 @@ import { PORTFOLIO_CONFIG } from '../../config/portfolio.config';
     AboutComponent,
     StackComponent,
     ProjectsComponent,
-    Contact,
+    ContactComponent,
     
     MatSidenavModule,
   ],

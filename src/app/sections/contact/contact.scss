@@ -1,0 +1,83 @@
+@use '../../../styles/abstracts/variables' as *;
+
+/* ==========================================
+    Contenedor
+========================================== */
+.contact {
+    display: flex;
+    flex-direction: column;
+    /* align-items: center;
+    text-align: center; */
+    gap: $space-lg;
+}
+
+/* ==========================================
+    Contenido
+========================================== */
+.contact__title {
+    font-size: clamp(2rem, 3.6vw, 3.4rem);
+    font-weight: 700;
+    line-height: 1.6;
+    color: $text-primary;
+}
+
+.contact__description {
+    max-width: 36rem;
+    margin: 0;
+    color: $text-secondary;
+    line-height: 1.6;
+}
+
+
+/* ==========================================
+    Navegación
+========================================== */
+.contact__links {
+
+    display: flex;
+    justify-content: start;
+    align-items: start;
+    flex-wrap: wrap;
+    gap: $space-md;
+
+}
+
+.contact__link {
+
+    display: inline-flex;
+    align-items: center;
+    gap: $space-xs;
+
+    color: $text-primary;
+    text-decoration: none;
+
+    font-weight: 600;
+    cursor: pointer;
+    
+    transition:
+        color $transition-fast,
+        transform $transition-fast;
+
+}
+
+.contact__link:hover {
+    color: $primary;
+    transform: translateY(-2px);
+}
+
+.contact__links img {
+    width: 20px;
+    height: 20px;
+}
+.contact__icon {
+    transition: transform $transition-fast;
+}
+
+.contact__link:hover .contact__icon {
+    transform: scale(1.08);
+}
+.contact__link:focus-visible {
+    outline: 2px solid $primary;
+    outline-offset: 4px;
+    border-radius: $radius-sm;
+}
